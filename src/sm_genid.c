@@ -136,7 +136,7 @@ SmsGenerateClientID (smsConn)
     struct in_addr *haddr = NULL;
 #if defined(IPv6) && defined(AF_INET6)
     struct addrinfo *ai, *first_ai;
-    if (getaddrinfo(hostname,NULL,NULL,&ai) == 0)
+    if (getaddrinfo(hostname,NULL,NULL,&ai) != 0)
 	return NULL;
 
     for (first_ai = ai; ai != NULL; ai = ai->ai_next) {
