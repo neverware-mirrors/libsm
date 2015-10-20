@@ -111,16 +111,15 @@ SmsGenerateClientID(SmsConn smsConn)
     char *temp;
     uuid_t uuid;
     uint32_t status;
+    size_t len;
 
     uuid_create(&uuid, &status);
 
     uuid_to_string(&uuid, &temp, &status);
 
-    if ((id = malloc (strlen (temp) + 2)) != NULL)
-    {
-        id[0] = '2';
-        strcpy (id+1, temp);
-    }
+    len = strlen(temp) + 2;
+    if ((id = malloc(len)) != NULL)
+        snprintf(id, len, "2%s", temp);
 
     free(temp);
 
