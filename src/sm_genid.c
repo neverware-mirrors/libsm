@@ -108,7 +108,7 @@ SmsGenerateClientID(SmsConn smsConn)
 {
 #if defined(HAVE_UUID_CREATE)
     char *id;
-    char **temp;
+    char *temp;
     uuid_t uuid;
     uint32_t status;
 
