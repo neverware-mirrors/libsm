@@ -2,7 +2,7 @@
 # Initialize Autoconf
 AC_PREREQ(2.60)
 AC_INIT([libSM], [1.2.3],
-        [https://bugs.freedesktop.org/enter_bug.cgi?product=xorg], [libSM])
+        [https://gitlab.freedesktop.org/xorg/lib/libSM/issues], [libSM])
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_HEADERS([config.h])
 
